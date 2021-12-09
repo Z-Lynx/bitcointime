@@ -9,8 +9,8 @@ app = Dash(__name__)
 server = app.server
 api_key = 'vpKHHlYxqsPU2VC7G7UP9QMNohCwZVudqZE8g1tfAfJBgMc8kOAUAoBnIQisd4UI'
 api_secret = 'Z4fU3e46cXYPltbvGN2VgQkojBnoKwv20RfDDrsHxN9MUxlKWolEU1XRYOPXjbbD'
-
-dataBTC = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/2014_apple_stock.csv')
+loop = asyncio.get_event_loop()
+dataBTC = pd.read_csv('out.csv')
 def convertTime(data):
     df = pd.DataFrame([data])
     df = df.loc[:,['E','p']]
@@ -56,5 +56,4 @@ def update_graph(n):
     line_fig = px.line(dataBTC,x='Time',y='Price')
     return line_fig
 if __name__ == '__main__':
-    loop = asyncio.get_event_loop()
     app.run_server(debug=True, threaded=True)
