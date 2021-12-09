@@ -6,6 +6,7 @@ from binance import BinanceSocketManager
 from dash import Dash, dcc, html, Input, Output
 import os
 app = Dash(__name__)
+server = app.server
 api_key = 'vpKHHlYxqsPU2VC7G7UP9QMNohCwZVudqZE8g1tfAfJBgMc8kOAUAoBnIQisd4UI'
 api_secret = 'Z4fU3e46cXYPltbvGN2VgQkojBnoKwv20RfDDrsHxN9MUxlKWolEU1XRYOPXjbbD'
 
