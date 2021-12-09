@@ -6,8 +6,8 @@ from binance import BinanceSocketManager
 from dash import Dash, dcc, html, Input, Output
 import os
 app = Dash(__name__)
-api_key = os.getenv('api_key')
-api_secret = os.getenv('api_secret')
+api_key = 'vpKHHlYxqsPU2VC7G7UP9QMNohCwZVudqZE8g1tfAfJBgMc8kOAUAoBnIQisd4UI'
+api_secret = 'Z4fU3e46cXYPltbvGN2VgQkojBnoKwv20RfDDrsHxN9MUxlKWolEU1XRYOPXjbbD'
 
 dataBTC = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/2014_apple_stock.csv')
 def convertTime(data):
