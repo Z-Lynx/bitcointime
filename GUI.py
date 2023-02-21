@@ -7,8 +7,8 @@ from dash import Dash, dcc, html, Input, Output
 import os
 app = Dash(__name__)
 server = app.server
-api_key = 'vpKHHlYxqsPU2VC7G7UP9QMNohCwZVudqZE8g1tfAfJBgMc8kOAUAoBnIQisd4UI'
-api_secret = 'Z4fU3e46cXYPltbvGN2VgQkojBnoKwv20RfDDrsHxN9MUxlKWolEU1XRYOPXjbbD'
+api_key = 'API_KEY'
+api_secret = 'API_S'
 loop = asyncio.get_event_loop()
 dataBTC = pd.read_csv('out.csv')
 def convertTime(data):
